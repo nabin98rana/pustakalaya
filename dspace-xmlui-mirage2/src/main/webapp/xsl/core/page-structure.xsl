@@ -187,7 +187,7 @@
                                                     <li><a href="{$context-path}/discover?filtertype=category&amp;filter_relational_operator=equals&amp;filter=Environment" class="text-capitalize"><img src="{$theme-path}/images/Environment.png" style="height:35px; margin-right:10px;"/><i18n:text>xmlui.ArtifactBrowser.Navigation.browse_environment</i18n:text></a></li>
                                                     <li><a href="{$context-path}/discover?filtertype=category&amp;filter_relational_operator=equals&amp;filter=Science+and+Technology" class="text-capitalize"><img src="{$theme-path}/images/Magazines-and-Newspapers.png" style="height:35px; margin-right:10px;"/><i18n:text>xmlui.ArtifactBrowser.Navigation.browse_science_and_technology</i18n:text></a></li>
                                                     <li><a href="{$context-path}/discover?filtertype=category&amp;filter_relational_operator=equals&amp;filter=All+Categories" class="text-capitalize"><img src="{$theme-path}/images/Teaching-Materials.png" style="height:35px; margin-right:10px;"/><i18n:text>xmlui.ArtifactBrowser.Navigation.browse_all_categories</i18n:text></a></li>
-                                                    <li><a href="{$context-path}/discover?filtertype=category&amp;filter_relational_operator=equals&amp;filter=Title+or+Authors" class="text-capitalize"><img src="{$theme-path}/images/Agriculture-and-Diversity.png" style="height:35px; margin-right:10px;"/><i18n:text>xmlui.ArtifactBrowser.Navigation.browse_titles</i18n:text><i18n:text>xmlui.ArtifactBrowser.Navigation.browse_authors</i18n:text></a></li>
+                                                    <li><a href="{$context-path}/discover?filtertype=category&amp;filter_relational_operator=equals&amp;filter=Title+or+Authors" class="text-capitalize"><img src="{$theme-path}/images/Agriculture-and-Diversity.png" style="height:35px; margin-right:10px;"/><i18n:text>xmlui.ArtifactBrowser.Navigation.browse_titles</i18n:text><span>&#160;|&#160;</span><i18n:text>xmlui.ArtifactBrowser.Navigation.browse_authors</i18n:text></a></li>
                                                 </ul>
                                             </div>
                                             <!-- Book gallery demo -->
@@ -623,7 +623,7 @@
                     <div class="row">
                         <div class="col-md-2">
                             <a class="navbar-brand" href="/">
-                                <img src="{$theme-path}/images/ep_logo.png" style="height:40px; padding-bottom:10px;"/>
+                                <img src="{$theme-path}/images/ep_logo.png" style="height:50px; padding-bottom:10px;"/>
                             </a>
                         </div><!-- Logo -->
                         <div class="col-md-6 col-md-offset-1" id="pustakalaya-navbar"
@@ -1139,9 +1139,9 @@
                             <div class="col-md-6">
                                 <!-- Creative Commons logo -->
                                 <div>
-                                    <img src="{concat($theme-path, '/images/creative-commons.png')}"/>
+                                    <img src="{concat($theme-path, '/images/creative-commons.png')}" style="padding-top:20px;"/>
                                     <br/>
-                                    <p style="color:#444444" class="text-capitalized">
+                                    <p style="color:#444444; text-align:justify; padding-top:10px;" class="text-capitalized">
                                         <i18n:text>xmlui.creative.commons</i18n:text>
                                         <a href="https://creativecommons.org/licenses/by-nc-nd/3.0/" target="_blank">Licensing details</a>
                                     </p>
@@ -1155,14 +1155,14 @@
 
                                     <a href="http://www.maitritrust.org.uk/" target="_blank"
                                        title="Go to Maitri Trust, UK website">
-                                        <img style="width:75px; height:30px; margin:10px;"
+                                        <img style="width:87px; height:57px; margin:10px;"
                                              src="{concat($theme-path, '/images/maitri-trust.png')}"
                                              alt="Maitri Trust, UK"/>
                                     </a>
 
                                     <a href="http://www.nepallibrary.org/" target="_blank"
                                        title="Go to Nepal Library Foundation website">
-                                        <img style="width:75px; height:30px;margin:10px;"
+                                        <img style="width:74px; height:57px;margin:10px;"
                                              src="{concat($theme-path, '/images/Nepal-Library-Foundation-logo.png')}"
                                              alt="Nepal Library Foundation"/>
                                     </a>
@@ -1175,7 +1175,7 @@
                             <!--Content contributors -->
                             <div id="our-content-contributors"
                                  style="border-left: 3px solid #f2f2f2; position:absolute; ">
-                                <h3 class="text-uppercase" style="margin-left:20px;"><i18n:text>xmlui.our.content.contributors</i18n:text></h3>
+                                <h3 class="text-uppercase" style="margin-left:37px;"><i18n:text>xmlui.our.content.contributors</i18n:text></h3>
                                 <a href="http://www.savethechildren.org/countries/asia/nepal.html"
                                    target="_blank"
                                    title="Save The Children">
@@ -1226,25 +1226,25 @@
 
                                 <a href="http://www.britishcouncil.org/nepal" target="_blank"
                                    title="British Council">
-                                    <img style="margin:20px; width:100px; height:33px;"
+                                    <img style="margin:10px; width:100px; height:33px;"
                                          src="{concat($theme-path, '/images/logo-british-council-color.png')}"
                                          alt="British Council Logo"/>
                                 </a>
 
                                 <a href="http://e-learningforkids.org/" target="_blank" title="E-Learning for Kids">
-                                    <img style="margin:20px; width:100px; height:33px;"
+                                    <img style="margin:10px; width:100px; height:33px;"
                                          src="{concat($theme-path, '/images/e-learning-for-kids.png')}"
                                          alt="EL Kids Logo"/>
                                 </a>
 
                                 <a href="http://practicalaction.org/nepal" target="_blank" title="Practical Action">
-                                    <img style="margin:20px; width:100px; height:33px;"
+                                    <img style="margin:10px; width:100px; height:33px;"
                                          src="{concat($theme-path, '/images/practical-action-logo-highres-300dpi.png')}"
                                          alt="PA Logo"/>
                                 </a>
 
                                 <a href="http://www.digitalhimalaya.com/" target="_blank" title="Digital Himalaya">
-                                    <img style="margin:20px; width:50px; height:30px;"
+                                    <img style="margin:10px; width:100px; height:33px;"
                                          src="{concat($theme-path, '/images/DH_logo_small.gif')}"
                                          alt="DH Logo"
                                          height="31"/>
