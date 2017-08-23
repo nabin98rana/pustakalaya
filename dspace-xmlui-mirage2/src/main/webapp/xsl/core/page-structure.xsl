@@ -18,6 +18,7 @@
     Author: ben at atmire.com
     Author: Alexey Maslov
 
+
 -->
 
 
@@ -65,13 +66,13 @@
             <xsl:when test="not($isModal)">
 
 
-            <xsl:text disable-output-escaping='yes'>&lt;!DOCTYPE html&gt;
-            </xsl:text>
+    <xsl:text disable-output-escaping='yes'>&lt;!DOCTYPE html&gt;
+</xsl:text>
                 <xsl:text disable-output-escaping="yes">&lt;!--[if lt IE 7]&gt; &lt;html class=&quot;no-js lt-ie9 lt-ie8 lt-ie7&quot; lang=&quot;en&quot;&gt; &lt;![endif]--&gt;
-            &lt;!--[if IE 7]&gt;    &lt;html class=&quot;no-js lt-ie9 lt-ie8&quot; lang=&quot;en&quot;&gt; &lt;![endif]--&gt;
-            &lt;!--[if IE 8]&gt;    &lt;html class=&quot;no-js lt-ie9&quot; lang=&quot;en&quot;&gt; &lt;![endif]--&gt;
-            &lt;!--[if gt IE 8]&gt;&lt;!--&gt; &lt;html class=&quot;no-js&quot; lang=&quot;en&quot;&gt; &lt;!--&lt;![endif]--&gt;
-            </xsl:text>
+&lt;!--[if IE 7]&gt;    &lt;html class=&quot;no-js lt-ie9 lt-ie8&quot; lang=&quot;en&quot;&gt; &lt;![endif]--&gt;
+&lt;!--[if IE 8]&gt;    &lt;html class=&quot;no-js lt-ie9&quot; lang=&quot;en&quot;&gt; &lt;![endif]--&gt;
+&lt;!--[if gt IE 8]&gt;&lt;!--&gt; &lt;html class=&quot;no-js&quot; lang=&quot;en&quot;&gt; &lt;!--&lt;![endif]--&gt;
+</xsl:text>
 
                 <!-- First of all, build the HTML head element -->
 
@@ -80,7 +81,7 @@
                 <!-- Then proceed to the body -->
                 <body>
                     <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
-                   chromium.org/developers/how-tos/chrome-frame-getting-started -->
+                    chromium.org/developers/how-tos/chrome-frame-getting-started -->
                     <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
                     <xsl:choose>
                         <xsl:when
@@ -99,45 +100,7 @@
                                 </div>
                             </div>
 
-                            <!--container fluid-->
-                            <div class="container-fluid">
-                                <div class="row">
-                                    <!--carousel for sliding images in header section -->
-                                    <div id="pustakalaya-slider" class="carousel slide" data-ride="carousel">
 
-                                        <!-- Wrapper for slides -->
-                                        <div class="carousel-inner" style="margin-top:10px;">
-                                            <div class="item active">
-                                                <img src="{concat($theme-path, '/images/knowledge-in-your-pocket01.png')}" style="width:100%;"/>
-                                            </div>
-
-                                            <div class="item">
-                                                <img src="{concat($theme-path, '/images/celebrating-diversity.png')}"
-                                                     alt="OLE Nepal's android application" style="width:100%;"/>
-                                            </div>
-
-                                            <div class="item">
-                                                <img src="{concat($theme-path, '/images/for-the-community.png')}"
-                                                     alt="slider 3" style="width:100%;"/>
-                                            </div>
-                                            <div class="item">
-                                                <img src="{concat($theme-path, '/images/childrens-books-in-nepali-language.png')}"
-                                                     alt="slider 4" style="width:100%;"/>
-                                            </div>
-                                        </div><!--end wrapper slides-->
-
-                                        <!-- Left and right controls -->
-                                        <a class="left carousel-control" href="#pustakalaya-slider" data-slide="prev">
-                                            <span class="glyphicon glyphicon-chevron-left"></span>
-                                            <span class="sr-only">Previous</span>
-                                        </a>
-                                        <a class="right carousel-control" href="#pustakalaya-slider" data-slide="next">
-                                            <span class="glyphicon glyphicon-chevron-right"></span>
-                                            <span class="sr-only">Next</span>
-                                        </a>
-                                    </div><!--end carousel image slider -->
-                                </div><!--end row-->
-                            </div><!--end container fluid-->
 
                             <!-- custom banner for homepage goes here -->
                             <div id="pustakalayaBanner">
@@ -148,7 +111,7 @@
                                 <div class="container-fluid">
                                     <div class="row">
                                         <div class="col-md-4" style="background:#16a085; height:40px;">
-                                            <p class="text-center" style="color:#eeeeee; padding-top:10px;"><i18n:text>xmlui.BrowseBooks</i18n:text></p>
+                                            <p class="text-center" style="color:#eeeeee; padding-top:10px;"><i18n:text>xmlui.BrowsePustakalaya</i18n:text></p>
                                         </div>
                                         <!-- search box -->
                                         <div style="background-color:#e74c3c;height:40px;" class="col-md-4">
@@ -167,7 +130,7 @@
                                         </div>
                                         <!-- Advance search -->
                                         <div class="col-md-4" style="background:#e74c3c; height:40px;">
-                                            <p class="pull-left" style="color:#eeeeee; padding-top:10px;"><i18n:text>xmlui.advanceSearch</i18n:text></p>
+                                            <p class="pull-left" style="color:#eeeeee; padding-top:10px;"></p>
                                         </div>
                                     </div><!-- end row -->
                                 </div><!-- End browse books and search bar -->
@@ -176,10 +139,39 @@
                                 <div style="background:#FFF3E0; padding-top:10px;">
                                     <div class="container">
                                         <div class="row">
+
                                             <!-- Browse by section -->
                                             <div class="col-md-4" id="book-browsing">
                                                 <ul style="padding:0px;">
-                                                    <li><a href="{$context-path}/discover?filtertype=category&amp;filter_relational_operator=equals&amp;filter=Literature+and+Arts" class="text-capitalize"><img src="{$theme-path}/images/Literature-and-Arts.png" style="height:35px; margin-right:10px;"/><i18n:text>xmlui.ArtifactBrowser.Navigation.browse_literature_and_arts</i18n:text></a></li>
+
+                                                    <!-- item 1 -->
+                                                    <!-- id should be static copied from rest api -->
+                                                    <div>
+                                                        <!-- header -->
+                                                        <li id="0ba7163c-10a8-41e9-b200-e43d305a6587" onclick="queryCollection(this)">
+                                                            <a>
+                                                                <img src="{$theme-path}/images/Literature-and-Arts.png" style="height:35px; margin-right:10px;"/><i18n:text>xmlui.ArtifactBrowser.Navigation.browse_literature_and_arts</i18n:text>
+                                                            </a>
+                                                            <!-- logo -->
+                                                            <i class="glyphicon glyphicon-plus-sign pull-right"></i>
+                                                        </li>
+
+                                                        <div class="list-group">
+                                                            <li class="list-group-item">
+                                                                <span class="badge">14</span>
+                                                                Cras justo odio
+                                                            </li>
+                                                        </div>
+
+
+
+                                                    </div>
+                                                    <!-- end item -->
+
+
+
+
+
                                                     <li><a href="{$context-path}/discover?filtertype=category&amp;filter_relational_operator=equals&amp;filter=Course+Materials" class="text-capitalize"><img src="{$theme-path}/images/course_materials.png" style="height:35px; margin-right:10px;"/><i18n:text>xmlui.ArtifactBrowser.Navigation.browse_course_materials</i18n:text></a><i18n:text></i18n:text></li>
                                                     <li><a href="{$context-path}/discover?filtertype=category&amp;filter_relational_operator=equals&amp;filter=Teaching+Materials" class="text-capitalize"><img src="{$theme-path}/images/Teaching-Materials.png" style="height:35px; margin-right:10px;"/><i18n:text>xmlui.ArtifactBrowser.Navigation.browse_teaching_materials</i18n:text></a></li>
                                                     <li><a href="{$context-path}/discover?filtertype=category&amp;filter_relational_operator=equals&amp;filter=Magazines+and+Newspapers" class="text-capitalize"><img src="{$theme-path}/images/Magazines-and-Newspapers.png" style="height:35px; margin-right:10px;"/><i18n:text>xmlui.ArtifactBrowser.Navigation.browse_magazines_and_newspapers</i18n:text></a></li>
@@ -190,89 +182,150 @@
                                                     <li><a href="{$context-path}/discover?filtertype=category&amp;filter_relational_operator=equals&amp;filter=Title+or+Authors" class="text-capitalize"><img src="{$theme-path}/images/Agriculture-and-Diversity.png" style="height:35px; margin-right:10px;"/><i18n:text>xmlui.ArtifactBrowser.Navigation.browse_titles</i18n:text><span>&#160;|&#160;</span><i18n:text>xmlui.ArtifactBrowser.Navigation.browse_authors</i18n:text></a></li>
                                                 </ul>
                                             </div>
+
+
+
                                             <!-- Book gallery demo -->
                                             <div class="col-md-8" id="book-gallery">
-                                                <!-- Book Banner -->
-                                                <div id="featured-items-container">
-                                                    <h6 style="background-color:#27ae60; color:#FFF; padding:5px 10px;">Featured items</h6>
-                                                    <div id="featured-book-gallery-parent">
-                                                        <h4>Loading recently added items...</h4>
-                                                    </div>
-                                                </div>
+                                                <!--Book Banner -->
+                                                <!--  uncomment to enable featured items
+                                                 <div id="featured-items-container">
+                                                     <h6 style="background-color:#27ae60; color:#FFF; padding:5px 10px;">Featured items</h6>
+                                                     <div id="featured-book-gallery-parent">
+                                                         <h4>Loading recently added items...</h4>
+                                                     </div>
+                                                 </div>
 
-                                                <!-- Recently added items -->
+                                                 -->
+
+                                                <!-- Recently added items  -->
+
+                                                <!-- uncomment this to enable recently added items
                                                 <div id="recently-added-items-container">
                                                     <h6  style="background-color:#27ae60; color:#FFF; padding:5px 20px;">Recently added items</h6>
                                                     <div id="recenty-added-items-parent">
                                                         <h4>Loading recently added items...</h4>
                                                     </div>
+                                                </div> -->
+
+
+                                                <!-- Audio Video items -->
+                                                <div>
+                                                    <h6 style="background-color:#27ae60; color:#FFF; padding:5px 10px;" class="text-capitalize">Audio Video Items</h6>
+                                                    <div id="audioVideoSectionParentID">
+                                                        <h3>Loading audio and video items ... </h3>
+                                                    </div>
                                                 </div>
-                                            </div><!--end col-md-8-->
+
+
+                                                <div class="educational-software">
+                                                    <h6 style="background-color:#27ae60; color:#FFF; padding:5px 10px;" class="text-capitalize">Interactive Education softwares</h6>
+                                                    <ul id="educationMaterial">
+                                                        <li>
+                                                            <a href="#x"><img src="{$theme-path}/images/simulations.png"
+                                                                              style="width: 200px; height: 120px;"
+                                                                              alt="Image" class="img-responsive"/></a>
+                                                        </li>
+
+                                                        <li>
+                                                            <a href="http://pustakalaya.org/sabdakosh.php" target="_blank"><img src="{$theme-path}/images/npp-logo.png" alt="Image"
+                                                                                                                                style="width: 200px; height: 120px;"
+                                                                                                                                class="img-responsive"/></a>
+                                                        </li>
+
+
+                                                        <li>
+                                                            <a href="http://pustakalaya.org/elkids.php" target="_blank"><img src="{$theme-path}/images/e-learning-forkids.png"
+                                                                                                                             style="width: 200px; height: 120px;"
+                                                                                                                             alt="Image" class="img-responsive"/></a>
+                                                        </li>
+
+
+                                                        <li>
+                                                            <a href="http://pustakalaya.org/lekids.php" target="_blank"><img src="{$theme-path}/images/learn-english-for-kids.png"
+                                                                                                                             style="width: 200px; height: 120px;"
+                                                                                                                             alt="Image" class="img-responsive"/></a>
+                                                        </li>
+
+                                                        <li>
+                                                            <a href="http://pustakalaya.org/epaath/" target="_blank"><img src="{$theme-path}/images/e-paath.png"
+                                                                                                                          style="width: 200px; height: 120px;"
+                                                                                                                          alt="Image" class="img-responsive"/></a>
+                                                        </li>
+
+                                                        <li>
+                                                            <a href="http://pustakalaya.org/audio.php" target="_blank"><img src="{$theme-path}/images/audiobook.png"
+                                                                                                                            style="width: 200px; height: 120px;"
+                                                                                                                            alt="Image" class="img-responsive"/></a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+
+                                            </div>  <!-- col-md-8 -->
                                         </div><!--end row-->
                                     </div>
                                 </div><!-- container  end -->
                                 <br/>
-
-                                <!-- nteractive Educational software  -->
-                                <div class="pustakalayaSection" style="background:#A5D6A7; margin-top:-20px;">
-                                    <div class="container">
-                                        <h4 class="text-center text-capitalize"  style="color:#060605;">Interactive Education softwares</h4>
-                                        <div class="col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
-                                            <div class="well">
-                                                <div id="myCarousel" class="carousel slide">
-                                                    <!--Carousel items-->
-                                                    <div class="carousel-inner">
-                                                        <div class="item active">
-                                                            <div class="row">
-                                                                <div class="col-sm-2"><a href="http://pustakalaya.org/epaath/" target="_blank"><img src="{$theme-path}/images/e-paath.png" alt="Image" class="img-responsive"/></a>
+                                <!--Interactive Educational software
+                                    <div class="pustakalayaSection" style="background:#A5D6A7; margin-top:-20px;">
+                                        <div class="container">
+                                            <h4 class="text-center text-capitalize"  style="color:#060605;">Interactive Education softwares</h4>
+                                            <div class="col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
+                                                <div class="well">
+                                                    <div id="myCarousel" class="carousel slide">
+                                                        Carousel items
+                                                        <div class="carousel-inner">
+                                                            <div class="item active">
+                                                                <div class="row">
+                                                                    <div class="col-sm-2"><a href="http://pustakalaya.org/epaath/" target="_blank"><img src="{$theme-path}/images/e-paath.png" alt="Image" class="img-responsive"/></a>
+                                                                    </div>
+                                                                    <div class="col-sm-2"><a href="http://pustakalaya.org/lekids.php" target="_blank"><img src="{$theme-path}/images/learn-english-for-kids.png" alt="Image" class="img-responsive"/></a>
+                                                                    </div>
+                                                                    <div class="col-sm-2"><a href="http://pustakalaya.org/elkids.php" target="_blank"><img src="{$theme-path}/images/e-learning-forkids.png" alt="Image" class="img-responsive"/></a>
+                                                                    </div>
+                                                                    <div class="col-sm-2"><a href="http://pustakalaya.org/sabdakosh.php" target="_blank"><img src="{$theme-path}/images/npp-logo.png" alt="Image" class="img-responsive"/></a>
+                                                                    </div>
+                                                                    <div class="col-sm-2"><a href="#x"><img src="{$theme-path}/images/simulations.png" alt="Image" class="img-responsive"/></a>
+                                                                    </div>
+                                                                    <div class="col-sm-2"><a href="http://pustakalaya.org/audio.php" target="_blank"><img src="{$theme-path}/images/audiobook.png" alt="Image" class="img-responsive"/></a>
+                                                                    </div>
                                                                 </div>
-                                                                <div class="col-sm-2"><a href="http://pustakalaya.org/lekids.php" target="_blank"><img src="{$theme-path}/images/learn-english-for-kids.png" alt="Image" class="img-responsive"/></a>
-                                                                </div>
-                                                                <div class="col-sm-2"><a href="http://pustakalaya.org/elkids.php" target="_blank"><img src="{$theme-path}/images/e-learning-forkids.png" alt="Image" class="img-responsive"/></a>
-                                                                </div>
-                                                                <div class="col-sm-2"><a href="http://pustakalaya.org/sabdakosh.php" target="_blank"><img src="{$theme-path}/images/npp-logo.png" alt="Image" class="img-responsive"/></a>
-                                                                </div>
-                                                                <div class="col-sm-2"><a href="#x"><img src="{$theme-path}/images/simulations.png" alt="Image" class="img-responsive"/></a>
-                                                                </div>
-                                                                <div class="col-sm-2"><a href="http://pustakalaya.org/audio.php" target="_blank"><img src="{$theme-path}/images/audiobook.png" alt="Image" class="img-responsive"/></a>
-                                                                </div>
+                                                                row
                                                             </div>
-                                                            <!--row-->
+
                                                         </div>
 
                                                     </div>
+                                                    carousel-inner
+                                                    <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
 
+                                                    <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>
                                                 </div>
-                                                <!--carousel-inner-->
-                                                <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
-
-                                                <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>
+                                                myCarousel
                                             </div>
-                                            <!--myCarousel-->
+                                            well
                                         </div>
-                                        <!--well-->
+                                        Static content
                                     </div>
-                                    <!--Static content-->
-                                </div>
 
 
-                                <!--  Interactive audio video materials -->
-                                <div class="pustakalayaSection" style="background:#81C784; height:350px; margin-top:-20px;">
-                                    <div class="container">
-                                        <h4 class="text-center text-capitalize" style="color:#060605;">Educational audio videos</h4>
-                                        <div class="col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
-                                            <div class="well">
-                                                <!--Carousel items-->
-                                                <div id="audioVideoSectionParentID">
-                                                    <h3>Loading audio and video items ... </h3>
+                                    Interactive audio video materials
+                                    <div class="pustakalayaSection" style="background:#81C784; height:350px; margin-top:-20px;">
+                                        <div class="container">
+                                            <h4 class="text-center text-capitalize" style="color:#060605;">Educational audio videos</h4>
+                                            <div class="col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
+                                                <div class="well">
+                                                    Carousel items
+                                                    <div id="audioVideoSectionParentID">
+                                                        <h3>Loading audio and video items ... </h3>
+                                                    </div>
                                                 </div>
+                                                well
                                             </div>
-                                            <!--well-->
+                                            Static content
                                         </div>
-                                        <!--Static content-->
                                     </div>
-                                </div>
-
+                                                            -->
                                 <!-- Reference materials -->
                                 <div class="pustakalayaSection" style="background:#A5D6A7; margin-top:-20px;">
                                     <div class="container">
@@ -297,7 +350,7 @@
                                                         </div>
 
                                                         <!--item-->
-                                                        <div class="item">
+                                                        <!--<div class="item">
                                                             <div class="row">
                                                                 <div class="col-sm-3"><a href="#x" class="thumbnail"><img src="http://placehold.it/250x250" alt="Image" class="img-responsive"/></a>
                                                                 </div>
@@ -309,10 +362,10 @@
                                                                 </div>
                                                             </div>
 
-                                                        </div>
+                                                        </div>-->
 
                                                         <!--item-->
-                                                        <div class="item">
+                                                        <!--<div class="item">
                                                             <div class="row">
                                                                 <div class="col-sm-3"><a href="#x" class="thumbnail"><img src="http://placehold.it/150x150" alt="Image" class="img-responsive"/></a>
                                                                 </div>
@@ -324,7 +377,7 @@
                                                                 </div>
                                                             </div>
 
-                                                        </div>
+                                                        </div>-->
                                                         <!--item-->
                                                     </div>
                                                     <!--carousel-inner-->
@@ -397,8 +450,11 @@
                         </xsl:otherwise>
                     </xsl:choose>
                     <!-- Javascript at the bottom for fast page loading -->
+                    <xsl:call-template name="addPustakalayaScript"/>
                     <xsl:call-template name="buildFooter"/>
                     <xsl:call-template name="addJavascript"/>
+
+
                 </body>
                 <xsl:text disable-output-escaping="yes">&lt;/html&gt;</xsl:text>
 
@@ -419,7 +475,7 @@
             <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 
             <!-- Use the .htaccess and remove these lines to avoid edge case issues.
-             More info: h5bp.com/i/378 -->
+            More info: h5bp.com/i/378 -->
             <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
 
             <!-- Mobile viewport optimized: h5bp.com/viewport -->
@@ -549,11 +605,16 @@
                 return true;
                 }
             </script>
+            <style>
+                .thumbnail-shadow{
+                box-shadow: 4px 4px 4px #888;
+                }
+            </style>
 
             <xsl:text disable-output-escaping="yes">&lt;!--[if lt IE 9]&gt;
-                &lt;script src="</xsl:text><xsl:value-of select="concat($theme-path, 'vendor/html5shiv/dist/html5shiv.js')"/><xsl:text disable-output-escaping="yes">"&gt;&#160;&lt;/script&gt;
-                &lt;script src="</xsl:text><xsl:value-of select="concat($theme-path, 'vendor/respond/respond.min.js')"/><xsl:text disable-output-escaping="yes">"&gt;&#160;&lt;/script&gt;
-                &lt;![endif]--&gt;</xsl:text>
+        &lt;script src="</xsl:text><xsl:value-of select="concat($theme-path, 'vendor/html5shiv/dist/html5shiv.js')"/><xsl:text disable-output-escaping="yes">"&gt;&#160;&lt;/script&gt;
+        &lt;script src="</xsl:text><xsl:value-of select="concat($theme-path, 'vendor/respond/respond.min.js')"/><xsl:text disable-output-escaping="yes">"&gt;&#160;&lt;/script&gt;
+        &lt;![endif]--&gt;</xsl:text>
 
             <!-- Modernizr enables HTML5 elements & feature detects -->
             <script src="{concat($theme-path, 'vendor/modernizr/modernizr.js')}">&#160;</script>
@@ -564,6 +625,12 @@
                 <xsl:choose>
                     <xsl:when test="starts-with($request-uri, 'page/about')">
                         <i18n:text>xmlui.mirage2.page-structure.aboutThisRepository</i18n:text>
+                    </xsl:when>
+                    <xsl:when test="starts-with($request-uri, 'page/help')">
+                        <i18n:text>xmlui.mirage2.page-structure.help</i18n:text>
+                    </xsl:when>
+                    <xsl:when test="starts-with($request-uri, 'page/feedback')">
+                        <i18n:text>xmlui.mirage2.page-structure.feedback</i18n:text>
                     </xsl:when>
                     <xsl:when test="not($page_title)">
                         <xsl:text>  </xsl:text>
@@ -610,11 +677,50 @@
 
 
     <!-- The header (distinct from the HTML head element) contains the title, subtitle, login box and various
-        placeholders for header images -->
+    placeholders for header images -->
     <xsl:template name="buildHeader">
-
-
         <header>
+            <!-- Top navigation -->
+            <!-- Comment this to disable top navigation -->
+
+            <nav class="navbar top-navigation">
+                <div class="container">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="/">
+                            <img src="{$theme-path}/images/ep_logo.png" style="height:40px; padding-bottom:10px;"/>
+                        </a>
+                    </div>
+
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">गृह पृष्ठ</a></li>
+                        <li><a href="#">ई-पाठ</a></li>
+                        <li><a href="#">क्रियाकलाप</a></li>
+                        <li><a href="#"> भिडियो </a></li>
+                        <li><a href="#">स्कूल विकिपिडिया </a></li>
+                        <li><a href="#">लेखक सूची </a></li>
+                        <li><a href="#"> सहयोग सुझाव  </a></li>
+                        <li><a href="{$context-path}/page/about"><i18n:text>xmlui.static.page.about</i18n:text></a></li>
+                        <li><a href="#">एन्ड्रोइड एप</a></li>
+
+                    </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a onclick="window.location.href='./register'" style="cursor:pointer"><span class="glyphicon glyphicon-user"></span> Sign Up</a>
+
+                        </li>
+
+                        <li>
+                            <a href="{/dri:document/dri:meta/dri:userMeta/dri:metadata[@element='identifier' and @qualifier='loginURL']}">
+                                <span class="glyphicon glyphicon-log-in"></span> Login
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+            </nav>
+
+
             <!-- menu icon -->
             <div class="navbar navbar-static-top" role="navigation" style="margin-top:15px; margin-bottom:15px;">
                 <div class="container">
@@ -626,7 +732,26 @@
                                 <img src="{$theme-path}/images/ep_logo.png" style="height:50px; padding-bottom:10px;"/>
                             </a>
                         </div><!-- Logo -->
+
+
+                        <!--TO DO-->
+
+                        <!--static Help page-->
                         <div class="col-md-6 col-md-offset-1" id="pustakalaya-navbar"
+                             style="padding-top:10px; padding-bottom:10px;">
+                            <div class="navbar-collapse collapse" aria-expanded="false" style="height: 1px;">
+
+                                <ul  id="pustakalaya-navbar" class="nav navbar-nav">
+                                    <li><a class="text-capitalized" style="color:#FFFF;" href="{$context-path}/page/help"><i18n:text>xmlui.mirage2.page-structure.help</i18n:text></a></li>
+                                    <li><a class="text-capitalized" style="color:#FFFF;" href="{$context-path}/page/feedback"><i18n:text>xmlui.mirage2.page-structure.feedback</i18n:text></a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+
+                        <!--static feedback page-->
+
+                        <!--<div class="col-md-6 col-md-offset-1" id="pustakalaya-navbar"
                              style="padding-top:10px; padding-bottom:10px;">
                             <div style="border-radius: 10px; background:#27ae60;
                             width:100%; padding-left:8%; padding-right:5%;">
@@ -658,7 +783,7 @@
                                 </div>
 
                             </div>
-                        </div>
+                        </div>-->
                         <div class="col-md-3">
                             <div class="navbar-header  hidden-xs">
                                 <ul class="nav navbar-nav">
@@ -671,10 +796,10 @@
                                                    data-toggle="dropdown">
                                                     <span class="hidden-xs">
                                                         <xsl:value-of select="/dri:document/dri:meta/dri:userMeta/
-                            dri:metadata[@element='identifier' and @qualifier='firstName']"/>
+                                            dri:metadata[@element='identifier' and @qualifier='firstName']"/>
                                                         <xsl:text> </xsl:text>
                                                         <xsl:value-of select="/dri:document/dri:meta/dri:userMeta/
-                            dri:metadata[@element='identifier' and @qualifier='lastName']"/>
+                                            dri:metadata[@element='identifier' and @qualifier='lastName']"/>
                                                         &#160;
                                                         <b class="caret"/>
                                                     </span>
@@ -683,13 +808,13 @@
                                                     aria-labelledby="user-dropdown-toggle" data-no-collapse="true">
                                                     <li>
                                                         <a href="{/dri:document/dri:meta/dri:userMeta/
-                            dri:metadata[@element='identifier' and @qualifier='url']}">
+                                        dri:metadata[@element='identifier' and @qualifier='url']}">
                                                             <i18n:text>xmlui.EPerson.Navigation.profile</i18n:text>
                                                         </a>
                                                     </li>
                                                     <li>
                                                         <a href="{/dri:document/dri:meta/dri:userMeta/
-                            dri:metadata[@element='identifier' and @qualifier='logoutURL']}">
+                                    dri:metadata[@element='identifier' and @qualifier='logoutURL']}">
                                                             <i18n:text>xmlui.dri2xhtml.structural.logout</i18n:text>
                                                         </a>
                                                     </li>
@@ -699,7 +824,7 @@
                                         <xsl:otherwise>
                                             <li>
                                                 <a href="{/dri:document/dri:meta/dri:userMeta/
-                            dri:metadata[@element='identifier' and @qualifier='loginURL']}">
+                    dri:metadata[@element='identifier' and @qualifier='loginURL']}">
                                                     <span class="hidden-xs">
                                                         <i18n:text>xmlui.dri2xhtml.structural.login</i18n:text>
                                                     </span>
@@ -887,7 +1012,7 @@
 
 
     <!-- The header (distinct from the HTML head element) contains the title, subtitle, login box and various
-        placeholders for header images -->
+    placeholders for header images -->
     <xsl:template name="buildTrail">
         <div class="trail-wrapper hidden-print">
             <div class="container">
@@ -1051,35 +1176,35 @@
         <xsl:variable name="ccLogo">
             <xsl:choose>
                 <xsl:when test="starts-with($ccLicenseUri,
-                                           'http://creativecommons.org/licenses/by/')">
+'http://creativecommons.org/licenses/by/')">
                     <xsl:value-of select="'cc-by.png'" />
                 </xsl:when>
                 <xsl:when test="starts-with($ccLicenseUri,
-                                           'http://creativecommons.org/licenses/by-sa/')">
+'http://creativecommons.org/licenses/by-sa/')">
                     <xsl:value-of select="'cc-by-sa.png'" />
                 </xsl:when>
                 <xsl:when test="starts-with($ccLicenseUri,
-                                           'http://creativecommons.org/licenses/by-nd/')">
+'http://creativecommons.org/licenses/by-nd/')">
                     <xsl:value-of select="'cc-by-nd.png'" />
                 </xsl:when>
                 <xsl:when test="starts-with($ccLicenseUri,
-                                           'http://creativecommons.org/licenses/by-nc/')">
+'http://creativecommons.org/licenses/by-nc/')">
                     <xsl:value-of select="'cc-by-nc.png'" />
                 </xsl:when>
                 <xsl:when test="starts-with($ccLicenseUri,
-                                           'http://creativecommons.org/licenses/by-nc-sa/')">
+'http://creativecommons.org/licenses/by-nc-sa/')">
                     <xsl:value-of select="'cc-by-nc-sa.png'" />
                 </xsl:when>
                 <xsl:when test="starts-with($ccLicenseUri,
-                                           'http://creativecommons.org/licenses/by-nc-nd/')">
+'http://creativecommons.org/licenses/by-nc-nd/')">
                     <xsl:value-of select="'cc-by-nc-nd.png'" />
                 </xsl:when>
                 <xsl:when test="starts-with($ccLicenseUri,
-                                           'http://creativecommons.org/publicdomain/zero/')">
+'http://creativecommons.org/publicdomain/zero/')">
                     <xsl:value-of select="'cc-zero.png'" />
                 </xsl:when>
                 <xsl:when test="starts-with($ccLicenseUri,
-                                           'http://creativecommons.org/publicdomain/mark/')">
+'http://creativecommons.org/publicdomain/mark/')">
                     <xsl:value-of select="'cc-mark.png'" />
                 </xsl:when>
                 <xsl:otherwise>
@@ -1339,73 +1464,74 @@
 
             <!-- Pustakalaya custom scripts -->
             <!-- script to grab the featured items and append in dom-->
-            <script>
-                $pustakalaya("document").ready(function(){
-                // Featured items URL
-                var featuredItemURL =   "/rest/filtered-items?query_field[]=local.featured&amp;query_op[]=matches&amp;query_val[]=yes&amp;collSel[]=&amp;limit=20&amp;offset=0&amp;expand=parentCollection%2Cmetadata&amp;filters=none";
+            <!-- <script>
+                 $pustakalaya("document").ready(function(){
+                 // Featured items URL
+                 var featuredItemURL =   "/rest/filtered-items?query_field[]=local.featured&amp;query_op[]=matches&amp;query_val[]=yes&amp;collSel[]=&amp;limit=20&amp;offset=0&amp;expand=parentCollection%2Cmetadata&amp;filters=none";
 
-                // Ajax call
-                $pustakalaya.ajax({
-                url: featuredItemURL,
-                type: "GET",
-                async: true,
-                contentType: "application/json",
-                success: function(success){
-                // console.log(success.items);
-                var featuredItemTemplate = $pustakalaya("<ul></ul>",{
-                id: "featured-book-gallery"
-                });
+                 // Ajax call
+                 $pustakalaya.ajax({
+                 url: featuredItemURL,
+                 type: "GET",
+                 async: true,
+                 contentType: "application/json",
+                 success: function(success){
+                 // console.log(success.items);
+                 var featuredItemTemplate = $pustakalaya("<ul></ul>",{
+                 id: "featured-book-gallery"
+                 });
 
-                success.items.forEach(function(item, featuredItemIndex){
-                var featuredItemTitle = item.name;
-                var featuredItemURL = window.location.href + item.handle;
-                // ajax call to get thumbnail
-                getThumbnail(item.uuid, function(featuredItemThumbnail){
-                // console.log(featuredItemTitle);
-                // console.log(featuredItemURL);
-                // console.log(featuredItemThumbnail);
+                 success.items.forEach(function(item, featuredItemIndex){
+                 var featuredItemTitle = item.name;
+                 var featuredItemURL = window.location.href + item.handle;
+                 // ajax call to get thumbnail
+                 getThumbnail(item.uuid, function(featuredItemThumbnail){
+                 // console.log(featuredItemTitle);
+                 // console.log(featuredItemURL);
+                 // console.log(featuredItemThumbnail);
 
-                // Create gallery items
-                var li = $pustakalaya("<li></li>");
-                var h3 = $pustakalaya("<h3></h3>");
-                var p = $pustakalaya("<p></p>", {
-                text: featuredItemTitle
-                });
+                 // Create gallery items
+                 var li = $pustakalaya("<li></li>");
+                 var h3 = $pustakalaya("<h3></h3>");
+                 var p = $pustakalaya("<p></p>", {
+                 text: featuredItemTitle
+                 });
 
-                var a = $pustakalaya("<a></a>",{
-                href: featuredItemURL,
-                });
+                 var a = $pustakalaya("<a></a>",{
+                 href: featuredItemURL,
+                 });
 
-                var img = $pustakalaya('<img />', {
-                src: featuredItemThumbnail,
-                alt: featuredItemTitle,
-                width: 200,
-                height: 120,
-                class: "img-responsive"
-                });
+                 var img = $pustakalaya('<img />', {
+                 src: featuredItemThumbnail,
+                 alt: featuredItemTitle,
+                 width: 200,
+                 height: 120,
+                 class: "img-responsive"
+                 });
 
-                li.append(h3.append(a.append(img)));
-                li.append(p);
+                 li.append(h3.append(a.append(img)));
+                 li.append(p);
 
-                // Append all the constructed items
-                featuredItemTemplate.append(li);
+                 // Append all the constructed items
+                 featuredItemTemplate.append(li);
 
-                }); // END getThumbnail
-                }); // End ForEach
-                // Insert into template
-                $pustakalaya("#featured-book-gallery-parent").html(featuredItemTemplate);
-                $pustakalaya("#featured-book-gallery").lightSlider({
-                item:4,
-                prevHtml: '',
-                nextHtml: '',
-                });
-                } // End success function
-                })// END ajax call
-                }); // End document.ready
-            </script>
+                 }); // END getThumbnail
+                 }); // End ForEach
+                 // Insert into template
+                 $pustakalaya("#featured-book-gallery-parent").html(featuredItemTemplate);
+                 $pustakalaya("#featured-book-gallery").lightSlider({
+                 item:4,
+                 prevHtml: '',
+                 nextHtml: '',
+                 });
+                 } // End success function
+                 })// END ajax call
+                 }); // End document.ready
+             </script>-->
+
 
             <!--script to grab all the recently added items -->
-            <script>
+            <!--<script>
                 $pustakalaya("document").ready(function(){
 
                 (function(){
@@ -1472,7 +1598,7 @@
                 alt: recentlyAddedItemTitle,
                 width: 180,
                 height: 140,
-                class: "img-responsive"
+                class: "img-responsive thumbnail-shadow"
                 });
 
                 li.append(h3.append(a.append(img)));
@@ -1498,7 +1624,7 @@
 
                 })(); // END IIEF
                 })
-            </script>
+            </script>-->
 
 
 
@@ -1650,7 +1776,7 @@
                 alt: itemTitle,
                 width: 200,
                 height: 120,
-                class: "img-responsive"
+                class: "img-responsive thumbnail-shadow"
                 });
 
                 li.append(h3.append(a.append(img)));
@@ -1704,13 +1830,15 @@
                 }
                 });
             </script>
+
+            <!-- script to enable audio video educational materials -->
         </footer>
     </xsl:template>
 
 
     <!--
             The meta, body, options elements; the three top-level elements in the schema
-    -->
+        -->
 
 
 
@@ -1732,10 +1860,26 @@
 
             <!-- Check for the custom pages -->
             <xsl:choose>
+                <!--static about page-->
                 <xsl:when test="starts-with($request-uri, 'page/about')">
                     <div class="hero-unit">
                         <h1><i18n:text>xmlui.mirage2.page-structure.heroUnit.title</i18n:text></h1>
                         <p><i18n:text>xmlui.mirage2.page-structure.heroUnit.content</i18n:text></p>
+                    </div>
+                </xsl:when>
+
+                <!--static help page-->
+                <xsl:when test="starts-with($request-uri, 'page/help')">
+                    <div class="hero-unit">
+                        <h1><i18n:text>xmlui.mirage2.page-structure.help.title</i18n:text></h1>
+                        <p><i18n:text>xmlui.mirage2.page-structure.help.content</i18n:text></p>
+                    </div>
+                </xsl:when>
+                <!--static feedback page-->
+                <xsl:when test="starts-with($request-uri, 'page/feedback')">
+                    <div class="hero-unit">
+                        <h1><i18n:text>xmlui.mirage2.page-structure.feedback.title</i18n:text></h1>
+                        <p><i18n:text>xmlui.mirage2.page-structure.feedback.content</i18n:text></p>
                     </div>
                 </xsl:when>
                 <!-- Otherwise use default handling of body -->
@@ -1749,7 +1893,7 @@
 
 
     <!-- Currently the dri:meta element is not parsed directly. Instead, parts of it are referenced from inside
-        other elements (like reference). The blank template below ends the execution of the meta branch -->
+    other elements (like reference). The blank template below ends the execution of the meta branch -->
     <xsl:template match="dri:meta">
     </xsl:template>
 
@@ -1759,9 +1903,24 @@
     <xsl:template match="dri:pageMeta" />
     <xsl:template match="dri:objectMeta" />
     <xsl:template match="dri:repositoryMeta" />
-    -->
+-->
 
     <xsl:template name="addJavascript">
+
+        <!-- enable above slider -->
+        <script type="text/javascript">
+            $pustakalaya(document).ready(function() {
+            var educationlMaterialSlider = $pustakalaya("#educationMaterial");
+            educationlMaterialSlider.lightSlider({
+            item:4,
+            prevHtml: '',
+            nextHtml: '',
+            });
+
+
+            });
+        </script>
+
 
         <!-- Hide banner if this is not the homepage -->
         <script type="text/javascript">
@@ -1817,10 +1976,10 @@
         </script>
 
         <script type="text/javascript"><xsl:text>
-                         if(typeof window.publication === 'undefined'){
-                            window.publication={};
-                          };
-                        window.publication.contextPath= '</xsl:text><xsl:value-of
+ if(typeof window.publication === 'undefined'){
+    window.publication={};
+};
+window.publication.contextPath= '</xsl:text><xsl:value-of
                 select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='contextPath'][not(@qualifier)]"/><xsl:text>';</xsl:text>
             <xsl:text>window.publication.themePath= '</xsl:text><xsl:value-of select="$theme-path"/><xsl:text>';</xsl:text>
         </script>
@@ -1888,14 +2047,14 @@
         <!-- Add a google analytics script if the key is present -->
         <xsl:if test="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='google'][@qualifier='analytics']">
             <script><xsl:text>
-                  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-                  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-                  ga('create', '</xsl:text><xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='google'][@qualifier='analytics']"/><xsl:text>', '</xsl:text><xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='request'][@qualifier='serverName']"/><xsl:text>');
-                  ga('send', 'pageview');
-           </xsl:text></script>
+  ga('create', '</xsl:text><xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='google'][@qualifier='analytics']"/><xsl:text>', '</xsl:text><xsl:value-of select="/dri:document/dri:meta/dri:pageMeta/dri:metadata[@element='request'][@qualifier='serverName']"/><xsl:text>');
+  ga('send', 'pageview');
+</xsl:text></script>
         </xsl:if>
     </xsl:template>
 
@@ -1937,5 +2096,96 @@
             </li>
         </xsl:if>
     </xsl:template>
+
+
+    <!-- Pustakalaya script template -->
+
+    <xsl:template name="addPustakalayaScript">
+        <script>
+            $pustakalaya(document).ready(function(){
+
+            // Script to get the list of collections
+            (function(window, $pustakalaya){
+
+            // Function to query the collection in communities.
+            window.queryCollection = function($event) {
+
+
+
+            // show minus button.
+            if( $pustakalaya($event).children('i').hasClass('glyphicon-plus-sign')) {
+            // Remove plus sign and add minus sign and append the content.
+            $pustakalaya($event).children('i').removeClass("glyphicon-plus-sign").addClass("glyphicon-minus-sign");
+            } else {
+            // Remove the minus and add plus.
+            $pustakalaya($event).children('i').removeClass("glyphicon-minus-sign").addClass("glyphicon-plus-sign");
+            }
+
+            // ID of community get from the click object
+            communityUUID = $pustakalaya($event).attr("id");
+
+            // Url to query the collection from communities
+            var url = 	window.location.origin + "/rest/communities/" + communityUUID + "/collections";
+
+            // Template variable to hold the dom.
+            var template = $pustakalaya();
+
+            // Ajax call to grab all the collection from this community.
+            $pustakalaya.ajax({
+            url: url,
+            type: "GET",
+            async: true,
+            contentType: "application/json",
+            success: function(data) {
+            console.log(data);
+            data.forEach(function(item, index) {
+            // Construct the dom
+            console.log(item.name);
+            console.log(window.location.href  + item.handle);
+            console.log(item.numberItems);
+
+            template = $pustakalaya("<div></div>",{
+            class: "list-group",
+            });
+
+
+            var li = $pustakalaya("<li></li>", {
+            class: "list-group-item",
+            text: item.name
+            });
+
+            var span = $pustakalaya("<span></span>",{
+            text: item.numberItems,
+            class: "badge"
+            });
+
+            // append span tag to li tag.
+            li.append(span);
+
+            // Create template.
+            template.append(li);
+            }); // End foreach.
+
+
+            // Append the dom to
+            console.log($event);
+            $pustakalaya($event).parent().append(template);
+
+
+            },
+            error: function(error) {
+            console.log("Error occured while querying collection");
+            }
+            }); // End ajax
+
+
+
+            }; // End queryCollection
+            })(window, $pustakalaya);
+            }); // End document.ready function.
+
+        </script>
+    </xsl:template>
+
 
 </xsl:stylesheet>
